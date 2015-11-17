@@ -1,0 +1,48 @@
+html
+  head
+    link(href='vendor/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+    link(href='vendor/sweetalert/dist/sweetalert.css', rel='stylesheet')
+    link(href='../css/style.css', rel='stylesheet')
+  body
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#nav-collapse', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/')= title
+        #nav-collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a#logout Logout
+    .container-fluid.well.span6
+      .row-fluid
+        .span2
+          img#avatarURL.img-circle(src='https://secure.gravatar.com/avatar/de9b11d0f9c0569ba917393ed5e5b3ab?s=140&r=g&d=mm')
+        .span8
+          h3#userNameField User Name
+          h6#userEmailField Email: MyEmail@servidor.com 
+        .span2
+          .btn-group
+            a.btn.dropdown-toggle.btn-info(data-toggle='dropdown', href='#')
+              | Action 
+              span.icon-cog.icon-white
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='/profile/profileEdit')
+                  span.icon-wrench
+                  |  Modify
+              //- li
+              //-   a(href='#')
+              //-     span.icon-trash
+              //-     |  Delete
+
+
+  script(src='vendor/jquery/dist/jquery.min.js')
+  script(src='vendor/bootstrap/dist/js/bootstrap.min.js')
+  script(src='vendor/sweetalert/dist/sweetalert.min.js')
+  script(src='../js/profile.js')
+  
